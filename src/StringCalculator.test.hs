@@ -11,11 +11,14 @@ import StringCalculator
 main = defaultMain tests
 
 tests = hUnitTestToTests $ TestList $
-  [emptyStringIsZero, oneStringIsOne]
+  [emptyStringIsZero, oneStringIsOne, twoStringIsTwo]
 
 emptyStringIsZero =
   stringCalc "" ~?= 0
 
 oneStringIsOne =
   stringCalc "1" ~?= 1
+
+twoStringIsTwo =
+  stringCalc "2" ~?= 2
 
