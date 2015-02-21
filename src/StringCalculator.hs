@@ -4,4 +4,5 @@ module StringCalculator
 )
 where
 
-stringCalc _ = 0
+stringCalc "1" = 1
+stringCalc _   = 0
