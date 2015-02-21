@@ -13,12 +13,18 @@ main = defaultMain tests
 tests = hUnitTestToTests $ TestList $
   [emptyStringIsZero] ++
   singleNumbers ++
-  [oneTwoNumberIsThree]
+  multipleNumbers
 
 singleNumbers = [
   oneStringIsOne,
   twoStringIsTwo
   ]
+
+multipleNumbers = [
+  oneTwoNumberIsThree,
+  oneTwoThreeNumberIsSix
+  ]
+
 
 
 emptyStringIsZero =
@@ -33,3 +39,6 @@ twoStringIsTwo =
 
 oneTwoNumberIsThree =
   stringCalc "1,2" ~?= 3
+
+oneTwoThreeNumberIsSix =
+  stringCalc "1,2,3" ~?= 6
