@@ -4,5 +4,6 @@ module StringCalculator
 )
 where
 
+stringCalc :: String -> Int
 stringCalc "1" = 1
 stringCalc _   = 0
