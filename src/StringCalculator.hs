@@ -4,7 +4,10 @@ module StringCalculator
 )
 where
 
+delimiter = ','
+
 stringCalc :: String -> Int
 stringCalc ""     = 0
-stringCalc "1,2"  = 3
-stringCalc n      = read n
+stringCalc n
+  | delimiter `elem` n    = 3
+  | otherwise             = read n
