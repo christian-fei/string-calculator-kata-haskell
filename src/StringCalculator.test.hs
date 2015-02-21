@@ -13,7 +13,9 @@ main = defaultMain tests
 tests = hUnitTestToTests $ TestList $
   [emptyStringIsZero] ++
   singleNumbers ++
-  multipleNumbers
+  multipleNumbers ++ [
+    handlesNewlinesAsDelimiter
+  ]
 
 singleNumbers = [
   oneStringIsOne,
@@ -42,3 +44,7 @@ oneTwoNumberIsThree =
 
 oneTwoThreeNumberIsSix =
   stringCalc "1,2,3" ~?= 6
+
+
+handlesNewlinesAsDelimiter =
+  stringCalc "1,2\n3" ~?= 6

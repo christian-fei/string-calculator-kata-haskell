@@ -6,10 +6,15 @@ where
 
 import Data.List.Split
 
-delimiter = ','
+delimiters = [',','\n']
 
 stringCalc :: String -> Int
 stringCalc ""     = 0
 stringCalc n
-  | delimiter `elem` n    = sum $ map read $ splitWhen (==delimiter) n
+  | containsDelimiter     = sum $ map readInt $ splitWhen (\x -> x `elem` delimiters) n
   | otherwise             = read n
+  where
+    containsDelimiter = or $ map (\x -> x `elem` delimiters) n
+
+readInt :: String -> Int
+readInt = read
