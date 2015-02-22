@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/christian-fei/string-calculator-kata-haskell.svg?style=svg)](https://circleci.com/gh/christian-fei/string-calculator-kata-haskell)
+
 # String Calculator
 
 [Roy Osherove](http://osherove.com/tdd-kata-1/)
