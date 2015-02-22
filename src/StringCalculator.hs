@@ -13,4 +13,5 @@ stringCalc "" = 0
 stringCalc n = sum $ parseNumbers n
 
 parseNumbers :: String -> [Int]
-parseNumbers n = map read $ splitWhen (\x -> x `elem` delimiters) n
+parseNumbers n = map read $ splitWhen isDelimiter n
+  where isDelimiter x = x `elem` delimiters
