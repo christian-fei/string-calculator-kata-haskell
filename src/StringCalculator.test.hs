@@ -11,7 +11,8 @@ main = defaultMain tests
 
 tests = hUnitTestToTests $ TestList $
   [emptyStringIsZero] ++ singleNumberIsNumberItself ++ [
-    oneTwoIsThree
+    oneTwoIsThree,
+    twoTwoIsFour
     ]
 
 
@@ -27,3 +28,6 @@ singleNumberIsNumberItself = [
 
 oneTwoIsThree =
   SC.add "1,2" ~?= 3
+
+twoTwoIsFour =
+  SC.add "2,2" ~?= 4
