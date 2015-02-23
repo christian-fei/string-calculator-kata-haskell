@@ -10,7 +10,11 @@ import qualified StringCalculator as SC
 main = defaultMain tests
 
 tests = hUnitTestToTests $ TestList $
-  [emptyStringIsZero] ++ singleNumberIsNumberItself ++ multipleNumbers
+  [emptyStringIsZero] ++
+  singleNumberIsNumberItself ++
+  multipleNumbers ++ [
+    newLineAsDelimiter
+    ]
 
 
 
@@ -39,3 +43,6 @@ twoTwoIsFour =
 
 oneTwoThreeIsSix =
   SC.add "1,2,3" ~?= 6
+
+newLineAsDelimiter =
+  SC.add "1\n2,3" ~?= 6
