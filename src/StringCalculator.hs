@@ -13,4 +13,4 @@ add n = sum $ map read $ splitNumbers n
 add n = read n
 
 splitNumbers :: String -> [String]
-splitNumbers n = splitWhen (==',') n
+splitNumbers n = splitWhen (\x -> x `elem` [',','\n']) n
