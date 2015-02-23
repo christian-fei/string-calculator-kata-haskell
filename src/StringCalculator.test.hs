@@ -8,8 +8,8 @@ import Test.HUnit
 main = defaultMain tests
 
 tests = hUnitTestToTests $ TestList $
-  [alwaysFails]
+  [emptyStringIsZero]
 
-alwaysFails =
-  True ~?= False
+emptyStringIsZero =
+  SC.add "" ~?= 0
 
