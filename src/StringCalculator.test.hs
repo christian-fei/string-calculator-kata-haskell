@@ -10,7 +10,9 @@ import qualified StringCalculator as SC
 main = defaultMain tests
 
 tests = hUnitTestToTests $ TestList $
-  [emptyStringIsZero] ++ singleNumberIsNumberItself
+  [emptyStringIsZero] ++ singleNumberIsNumberItself ++ [
+    oneTwoIsThree
+    ]
 
 
 emptyStringIsZero =
@@ -22,3 +24,6 @@ singleNumberIsNumberItself = [
   SC.add "3" ~?= 3,
   SC.add "4" ~?= 4
   ]
+
+oneTwoIsThree =
+  SC.add "1,2" ~?= 3
