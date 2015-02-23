@@ -10,8 +10,13 @@ import qualified StringCalculator as SC
 main = defaultMain tests
 
 tests = hUnitTestToTests $ TestList $
-  [emptyStringIsZero]
+  [emptyStringIsZero] ++ [
+    singleNumberIsNumberItself
+    ]
+
 
 emptyStringIsZero =
   SC.add "" ~?= 0
 
+singleNumberIsNumberItself =
+  SC.add "1" ~?= 1
