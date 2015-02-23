@@ -19,7 +19,7 @@ library
   -- exposed-modules:
   -- other-modules:
   -- other-extensions:
-  build-depends:       base >=4.2 && <4.8, HUnit, test-framework, test-framework-hunit
+  build-depends:       base >=4.2 && <4.8, split, HUnit, test-framework, test-framework-hunit
   hs-source-dirs:      src
   default-language:    Haskell2010
 
@@ -27,5 +27,5 @@ Test-Suite StringCalculator
   type:                exitcode-stdio-1.0
   main-is:             StringCalculator.test.hs
   hs-source-dirs:      src
-  build-depends:       base, containers, HUnit, test-framework, test-framework-hunit
+  build-depends:       base, containers, split, HUnit, test-framework, test-framework-hunit
   default-language:    Haskell2010

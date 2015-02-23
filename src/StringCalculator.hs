@@ -4,9 +4,13 @@ module StringCalculator
 )
 where
 
+import Data.List.Split
+
 
 add :: String -> Int
 add "" = 0
-add "1,2" = 3
-add "2,2" = 4
+add n = sum $ map read $ splitNumbers n
 add n = read n
+
+splitNumbers :: String -> [String]
+splitNumbers n = splitWhen (==',') n
