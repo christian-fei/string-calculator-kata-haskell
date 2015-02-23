@@ -18,5 +18,7 @@ emptyStringIsZero =
 
 singleNumberIsNumberItself = [
   SC.add "1" ~?= 1,
-  SC.add "2" ~?= 2
+  SC.add "2" ~?= 2,
+  SC.add "3" ~?= 3,
+  SC.add "4" ~?= 4
   ]
