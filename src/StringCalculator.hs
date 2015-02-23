@@ -6,4 +6,5 @@ where
 
 
 add :: String -> Int
-add _ = 0
+add "" = 0
+add "1" = 1
