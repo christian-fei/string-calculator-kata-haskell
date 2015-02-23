@@ -11,7 +11,6 @@ delimiters = [',','\n']
 add :: String -> Int
 add "" = 0
 add n = sum $ map read $ splitNumbers n
-add n = read n
 
 splitNumbers :: String -> [String]
 splitNumbers n = splitWhen (\x -> x `elem` delimiters) n
